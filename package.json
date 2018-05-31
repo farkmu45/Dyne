@@ -5,12 +5,12 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch:sass": "node-sass sass/main.scss public/css/master.css -w"
+    "watch:sass": "node-sass sass/main.scss public/css/master.css -w",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/farkmu45/Dyne.git",
-    "start": "node app.js"
+    "url": "git+https://github.com/farkmu45/Dyne.git"
   },
   "keywords": [
     "Web",

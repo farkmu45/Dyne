@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var methodOverride = require('method-override');
 var Data = require('./models/task');
 
-mongoose.connect('mongodb://localhost/dyne');
+mongoose.connect('mongodb://farkmu5:maulana123@ds141320.mlab.com:41320/dyne');
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public/'));
 app.use(express.urlencoded({

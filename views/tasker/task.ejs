@@ -27,7 +27,7 @@
           <a href="/tasker/<%= task._id %>/edit" class="btn btn-edit">
               Edit
             </a>
-          <form class="btn btn-delete" action="index.html" method="post">
+          <form class="btn btn-delete" action="/tasker/<%= task._id %>?_method=delete" method="post">
             <button type="submit" class="del">Delete</button>
           </form>
         </div>

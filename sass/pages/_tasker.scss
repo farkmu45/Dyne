@@ -1,0 +1,85 @@
+.new {
+  grid-column: full-start / full-end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__label {
+    font-size: 6rem;
+    font-weight: 300;
+    letter-spacing: .6rem;
+    color: $grey-dark-1;
+    padding: 2rem;
+    text-transform: capitalize;
+
+    @include respond(bp-small) {
+      font-size: 4rem;
+      padding: 4rem;
+    };
+  }
+}
+
+.note {
+  grid-column: center-start / center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 2rem;
+  align-items: start;
+
+  &-new {
+    box-shadow: 0 0 1rem rgba(black, .2);
+    border-radius: 10px;
+  }
+
+  &-details {
+    box-shadow: 0 0 1rem rgba(black, .2);
+    border-radius: 10px;
+    color: black;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__box {
+    padding: 2rem;
+    color: $grey-dark-1;
+    box-shadow: 0 0 1rem rgba(black, .2);
+    border-radius: 10px;
+  }
+
+  &__name {
+    font-size: 3.5rem;
+    letter-spacing: .3rem;
+    color: $grey-dark-1;
+    padding-bottom: 1rem;
+  }
+
+  &__date {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: $grey-dark-3;
+    font-weight: 600;
+    letter-spacing: .3rem;
+    margin-bottom: .8rem;
+  }
+
+  &__text {
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: $grey-dark-2;
+    margin-bottom: 2rem;
+    line-height: 2.5rem;
+  }
+
+  &__action {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.add {
+  grid-column: 5 / 7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,19 @@
+.error {
+  background-color: $color-dark;
+  grid-column: full-start / full-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__name {
+    font-size: 5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+  }
+
+  &__text {
+    font-size: 3rem;
+  }
+}

@@ -1,0 +1,48 @@
+.heading {
+
+  &-header {
+    font-size: 6rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.7rem;
+  }
+
+  &-1 {
+    font-size: 8rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 2rem;
+    color: $primary-color;
+
+    @include respond(bp-medium) {
+      font-size: 6rem;
+    };
+
+    @include respond(bp-smallest){
+      font-size: 3.5rem;
+      padding: 0 4rem;
+    };
+  }
+
+  &-2 {
+    font-size: 6rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.7rem;
+
+    @include respond(bp-medium) {
+      font-size: 4rem;
+    };
+
+    @include respond(bp-smallest) {
+      font-size: 3rem;
+    };
+  }
+
+  &-3 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: $secondary-color;
+    letter-spacing: .4rem;
+  }
+}

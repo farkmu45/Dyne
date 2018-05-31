@@ -1,0 +1,44 @@
+.btn {
+
+  box-shadow: 0 .2rem 1rem rgba(black, .2);
+  border-radius: 50px;
+  padding: .7rem 2rem;
+  color: $grey-dark-1;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 200ms;
+
+  &:hover {
+    box-shadow: 0 .6rem 1rem rgba(black, .3);
+    transform: translateY(-.3rem);
+  }
+
+  &:active {
+    box-shadow: 0 .4rem 1rem rgba(black, .3);
+    transform: translateY(-.1rem);
+  }
+
+  &-edit,
+  &-edit:link,
+  &-edit:visited {
+    text-decoration: none;
+    font-size: 1.7rem;
+    outline: none;
+  }
+
+  &-delete {
+    cursor: pointer;
+  }
+}
+
+.del {
+  color: $grey-dark-1;
+  background-color: white;
+  border: none;
+  font-size: 1.7rem;
+  font-weight: 400;
+  font-family: "Montserrat";
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}

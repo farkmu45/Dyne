@@ -1,0 +1,74 @@
+.newtask {
+  display: grid;
+  padding: 2rem 4rem;
+
+  &__input {
+    font-family: "Montserrat", sans-serif;
+    display: block;
+    background-color: white;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(black, .2);
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    font-size: 3rem;
+    color: $grey-dark-3;
+    width: 50%;
+    text-transform: capitalize;
+
+    &:focus {
+      color: $grey-dark-1;
+    }
+
+    &:focus + .newtask__label {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  &__text {
+    background-color: white;
+    font-family: "Montserrat", sans-serif;
+    border: none;
+    width: 100%;
+    box-shadow: 0 0 1rem rgba(black, .2);
+    justify-self: center;
+    border-radius: 10px;
+    color: $grey-dark-3;
+    padding: 1.5rem 1.7rem;
+    font-size: 2rem;
+
+    &:focus {
+      color: $grey-dark-1;
+    }
+
+    &:focus + .newtask__label {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  &__box {
+    padding-bottom: 2rem;
+  }
+
+  &__label {
+    display: block;
+    color: $grey-dark-3;
+    margin-left: 3rem;
+    margin-top: 1rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 200ms linear;
+    transform: translateY(-2rem);
+  }
+
+  &__submit {
+    justify-self: center;
+    padding: 2rem 4rem;
+    color: $grey-dark-2;
+  }
+}

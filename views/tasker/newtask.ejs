@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>New Task</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="../css/master.css">
+  </head>
+  <body class="container container-tasker">
+    <section class="new">
+      <h1 class="new__label">Add new notes?</h1>
+    </section>
+    <main class="note note-new">
+      <form class="newtask" action="/tasker" method="post">
+        <div class="newtask__box">
+          <input type="text" id="input__name" name="newdata[name]" placeholder="Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name'" class="newtask__input">
+          <label for="input__name" class="newtask__label">Name</label>
+        </div>
+        <div class="newtask__box">
+          <textarea id="input__details" name="newdata[details]" placeholder="Details" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Details'" rows="10" cols="100" class="newtask__text"></textarea>
+          <label for="input__details" class="newtask__label">Details</label>
+        </div>
+        <button type="submit" class="btn del newtask__submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>

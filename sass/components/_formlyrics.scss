@@ -1,0 +1,44 @@
+.form {
+
+  &__find {
+    padding: .5rem 1.5rem;
+    font-size: 3rem;
+    letter-spacing: .05rem;
+    transition: 400ms all;
+    width: 80%;
+
+    &--light {
+      border: none;
+      border-bottom: 3px $primary-lyric solid;
+      background-color: $grey-dark-1;
+      color: $grey-light-4;
+
+      &:focus {
+        color: $primary-lyric;
+        border-bottom: 3px $primary-lyric solid
+      }
+    }
+  }
+
+  &__submit {
+    border: none;
+    cursor: pointer;
+    transition: all 400ms;
+    background-color: $grey-dark-1;
+    fill: $grey-dark-2;
+    display: inline-block;
+    vertical-align: middle;
+
+    &:hover {
+      .form__icon {
+        fill: $primary-lyric;
+      }
+    }
+  }
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+    transition: all 300ms;
+  }
+}

@@ -1,0 +1,60 @@
+.navigation {
+  grid-column: full-start / full-end;
+  list-style: none;
+  background-color: $color-dark;
+  box-shadow: 0 1rem 2rem rgba(black, .2);
+  justify-content: flex-end;
+  display: flex;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex: 0 0 10%;
+    transform: translateY(-3rem);
+    opacity: 0;
+    transition: all 400ms;
+
+    &--guide {
+      transform: translateY(0);;
+      opacity: 1;
+    }
+  }
+
+  &__icon {
+    height: 4rem;
+    fill: $grey-dark-3;
+    transition: all 400ms;
+  }
+
+  &__link--active {
+    color: $secondary-color;
+  }
+
+  &__link,
+  &__link:visited,
+  &__link:link {
+    display: flex;
+    color: $grey-light-1;
+    flex: 1;
+    text-decoration: none;
+    justify-content: center;
+    align-self: stretch;
+    align-items: center;
+    transition: all 400ms;
+
+    &:hover {
+      color: $secondary-color;
+      box-shadow: inset 0 5px 0 0 $secondary-color;
+    }
+  }
+
+  &:hover > * {
+    opacity: 1;
+    transform: translateY(0);
+
+    .navigation__icon {
+      fill: $grey-light-1;
+      transform: rotateX(180deg);
+    }
+  }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasker | Your Instant Note</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
+  <link rel="stylesheet" href="css/master.css">
+</head>
+
+<body class="container container-tasker">
+  <section class="new">
+    <h1 class="new__label">Tasker | Easy Notes</h1>
+  </section>
+  <main class="note">
+    <% data.forEach(function(task) { %>
+      <div href="hello" class="note__box">
+        <h3 class="note__name"><%= task.name %></h3>
+        <p class="note__date">
+          <%= task.date %>
+        </p>
+        <p class="note__text">
+          <%= task.details %>
+        </p>
+        <div class="note__action">
+          <a href="/tasker/<%= task._id %>/edit" class="btn btn-edit">
+              Edit
+            </a>
+          <form class="btn btn-delete" action="index.html" method="post">
+            <button type="submit" class="del">Delete</button>
+          </form>
+        </div>
+      </div>
+      <%  }) %>
+  </main>
+  <section class="add">
+    <a href="/tasker/new" class="btn btn-edit">Add New</a>
+  </section>
+</body>
+
+</html>

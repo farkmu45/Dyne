@@ -1,0 +1,38 @@
+{
+  "name": "dyne",
+  "version": "1.0.0",
+  "description": "Dynamic, flexible website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "node-sass sass/main.scss public/css/master.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farkmu45/Dyne.git"
+  },
+  "keywords": [
+    "Web",
+    "Testing",
+    "Sass",
+    "Modern",
+    "Node"
+  ],
+  "author": "Fark",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/farkmu45/Dyne/issues"
+  },
+  "homepage": "https://github.com/farkmu45/Dyne#readme",
+  "devDependencies": {
+    "autoprefixer": "^8.5.2",
+    "node-sass": "^4.9.0",
+    "postcss-cli": "^5.0.0"
+  },
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "method-override": "^2.3.10",
+    "mongoose": "^5.1.3"
+  }
+}

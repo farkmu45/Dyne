@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="../css/master.css">
+  </head>
+  <body class="container container-tasker">
+    <section class="new">
+    </section>
+    <main class="note note-details">
+      <h3 class="note__name"><%= detaileddata.name %></h3>
+      <p class="note__date"><%= detaileddata.date %></p>
+      <p class="note__text"><%= detaileddata.details %></p>
+
+      <div class="note__action">
+        <a href="/tasker" class="btn btn-edit">Back</a>
+      </div>
+    </main>
+  </body>
+</html>

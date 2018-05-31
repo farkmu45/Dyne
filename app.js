@@ -4,8 +4,6 @@ var mongoose = require('mongoose');
 var methodOverride = require('method-override');
 var Data = require('./models/task');
 
-
-
 mongoose.connect('mongodb://localhost/dyne');
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public/'));
@@ -94,6 +92,4 @@ app.get('*', function(req, res) {
   res.render('error');
 });
 
-app.listen(3000, function() {
-  console.log('Server starts on ' + 3000);
-});
+app.listen(process.ENV.IP, process.ENV.PORT);

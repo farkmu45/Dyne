@@ -9,7 +9,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/farkmu45/Dyne.git"
+    "url": "git+https://github.com/farkmu45/Dyne.git",
+    "start": "node app.js"
   },
   "keywords": [
     "Web",
@@ -27,7 +28,7 @@
   "engines": {
     "node": "10.3.0",
     "npm": "6.1.0"
-  }
+  },
   "devDependencies": {
     "autoprefixer": "^8.5.2",
     "node-sass": "^4.9.0",

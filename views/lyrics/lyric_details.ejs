@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Lyrics</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="./../../css/master.css">
+  </head>
+  <body class="container container-lyric">
+    <main class="content">
+      <section class="content__show content__show--details">
+        <h3 class="content__name content__name--big"><%= title %></h3>
+        <p class="content__details"><%= artist %> </p>
+        <p class="content__lyric"><%- data %></p>
+      </section>
+      <section class="content__powered">
+        <form class="" action="/lyric/s" method="get" class="form">
+          <input type="text" name="words" placeholder="Song name" class="form__find form__find--light">
+          <button type="submit" class="form__submit">
+              <svg class="form__icon">
+                <use xlink:href="./../../img/sprite.svg#icon-search"></use>
+              </svg>
+            </button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

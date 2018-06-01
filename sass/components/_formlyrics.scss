@@ -6,6 +6,11 @@
     letter-spacing: .05rem;
     transition: 400ms all;
     width: 80%;
+    font-family: "Montserrat";
+
+    @include respond(bp-small) {
+      font-size: 2rem;
+    };
 
     &--light {
       border: none;

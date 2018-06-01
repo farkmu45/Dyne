@@ -8,19 +8,42 @@
   overflow: hidden;
   box-shadow: 0 0.5rem 2rem rgba(black, .35);
 
+  @include respond(bp-medium) {
+    grid-template-rows: 10rem min-content;
+  };
+
+  @include respond(bp-small) {
+    grid-template-rows: 10rem min-content;
+  };
+
   &__show {
     grid-column: 1/5;
+    grid-row: 2/9;
     display: grid;
+
+    @include respond(bp-medium) {
+      grid-column: 1/-1;
+    };
+
     &--landing {
       grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: repeat(8, 1fr);
     }
 
     &--list {
       padding: 4rem;
       background-color: $grey-light-1;
-      grid-auto-rows: 10rem;
+      grid-auto-rows: min-content;
       overflow-y: scroll;
+    }
+
+    &--details {
+      background-color: $grey-light-1;
+      color: black;
+      display: flex;
+      align-items: center;
+      padding: 6rem 4rem;
+      overflow-y: scroll;
+      flex-direction: column;
     }
   }
 
@@ -31,12 +54,17 @@
     padding: 0 3rem;
     align-items: center;
     justify-items: center;
+
+    @include respond(bp-medium) {
+      grid-column: 1/-1;
+      grid-row: 1/2;
+    };
   }
 
-  &__bottom {}
-
-  &__power {
-    font-weight: 300;
+  &__lyric {
+    color: $grey-dark-1;
+    font-size: 2.5rem;
+    padding: 2rem 3rem;
   }
 
   &__main:link,
@@ -47,62 +75,106 @@
 
   &__main {
     padding: 2rem 3rem;
-    transition: all 300ms;
+    transition: all 400ms;
 
     &:hover {
-      background-color: rgba(black, .6);
+      background-image: linear-gradient(rgba(black, .01), rgba(black, .01));
+      background-color: rgba(black, .5);
     }
     &--1 {
       grid-column: 1 / 4;
+
       grid-row: 1 / 4;
-      background-color: red;
+      background-image: linear-gradient(to left top, #e63ec5, #6690ff);
+
+      @include respond(bp-small) {
+        grid-column: 1 / -1;
+        grid-row: 1 / 3;
+      };
     }
 
     &--2 {
       grid-column: 4/9;
       grid-row: 1/5;
-      background-color: aqua;
+      background-image: linear-gradient(to left top, #195669, #52bf7b);
+
+      @include respond(bp-small) {
+        grid-column: 1 / -1;
+        grid-row: 3 / 5;
+      };
     }
 
     &--3 {
       grid-column: 1/4;
       grid-row: 4/7;
-      background-color: yellow;
+      background-image: linear-gradient(to left top, #7b1fcc, #ea5966);
+
+      @include respond(bp-small) {
+        grid-column: 1 / -1;
+        grid-row: 5 / 7;
+      };
     }
 
     &--4 {
       grid-column: 4 /6;
       grid-row: 5/7;
-      background-color: green;
+      background-image: linear-gradient(to left top, #571845, #b39cc8);
+
+      @include respond(bp-small) {
+        grid-column: 1 / -1;
+        grid-row: 7 / 9;
+      };
     }
 
     &--5 {
       grid-column: 6 / 9;
       grid-row: 5/7;
-      background-color: blue;
+      background-image: linear-gradient(to left top,#920574 ,#f3b165);
+
+      @include respond(bp-small) {
+        grid-column: 1 / -1;
+        grid-row: 9 / 11;
+      };
     }
 
     &--6 {
       grid-column: 1 / 5;
       grid-row: 7/9;
-      background-color: aqua;
+      background-image: linear-gradient(to left top,#920148 ,#00ba8d);
+
+      @include respond(bp-small) {
+        grid-column: 1 / -1;
+        grid-row: 11 / 13;
+      };
     }
 
     &--7 {
       grid-column: 5 / 9;
       grid-row: 7/9;
-      background-color: violet;
+      background-image: linear-gradient(to left top, #8d44ad ,#c23a2e);
+
+      @include respond(bp-small) {
+        grid-column: 1 / -1;
+        grid-row: 13 / 15;
+      };
     }
   }
 
   &__name {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
-    letter-spacing: .6rem;
+    letter-spacing: .5rem;
+    font-weight: 500;
+
+    &--big {
+      font-size: 2rem;
+    }
 
     &--result {
+      font-size: 2rem;
+      font-weight: 500;
       letter-spacing: .3rem;
-      color: $grey-dark-2;
+      color: $grey-dark-1;
     }
   }
 
@@ -121,12 +193,22 @@
     padding: 2rem;
 
     &:hover {
-      background-color: $grey-dark-3;
+      background-color: $grey-light-3;
     }
   }
 
 
   &__details {
     color: $grey-dark-3;
+    font-size: 1.6rem;
+  }
+
+  &__lyric {
+    font-size: 1.8rem;
+  }
+
+  &__song {
+    font-size: 2rem;
+    font-weight: 500;
   }
 }

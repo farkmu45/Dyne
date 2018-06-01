@@ -6,13 +6,21 @@
   justify-content: flex-end;
   display: flex;
 
+  @include respond(bp-medium) {
+    flex-direction: column;
+  };
+
   &__item {
     display: flex;
-    align-items: center;
     flex: 0 0 10%;
     transform: translateY(-3rem);
     opacity: 0;
     transition: all 400ms;
+
+    @include respond(bp-medium) {
+      flex: 1;
+      align-items: stretch;
+    };
 
     &--guide {
       transform: translateY(0);;
@@ -24,6 +32,15 @@
     height: 4rem;
     fill: $grey-dark-3;
     transition: all 400ms;
+    width: 25%;
+    margin: 0 3rem;
+
+    @include respond(bp-medium) {
+      visibility: hidden;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    };
   }
 
   &__link--active {
@@ -38,14 +55,25 @@
     flex: 1;
     text-decoration: none;
     justify-content: center;
-    align-self: stretch;
     align-items: center;
     transition: all 400ms;
 
     &:hover {
       color: $secondary-color;
       box-shadow: inset 0 5px 0 0 $secondary-color;
+
+      @include respond(bp-medium) {
+        box-shadow: inset 0 0 0 0 $secondary-color;
+        color: white;
+      };
     }
+
+    @include respond(bp-medium) {
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 4rem;
+      flex: 1;
+    };
   }
 
   &:hover > * {

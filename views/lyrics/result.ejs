@@ -5,31 +5,21 @@
   <meta charset="utf-8">
   <title>Result</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
-  <link rel="stylesheet" href="master.css">
+  <link rel="stylesheet" href="./../css/master.css">
 </head>
 
 <body class="container container-lyric">
   <main class="content">
     <section class="content__show content__show--list">
-      <a href="#" class="content__result">
-        <h5 class="content__name content__name--result">Hello</h5>
-        <p class="content__details">It's me</p>
-      </a>
-      <a href="#" class="content__result">
-        <h5 class="content__name content__name--result">Hello</h5>
-        <p class="content__details">It's me</p>
-      </a>
-      <a href="#" class="content__result">
-        <h5 class="content__name content__name--result">Hello</h5>
-        <p class="content__details">It's me</p>
-      </a>
-      <a class="content__result">
-        <h5 class="content__name content__name--result">Hello</h5>
-        <p class="content__details">It's me</p>
-      </a>
+      <% song.message.body.track_list.forEach(function(data) { %>
+        <a href="/lyric/<%= data.track.track_name %>/<%= data.track.artist_name %>" class="content__result">
+          <h5 class="content__name content__name--result"><%=data.track.track_name %></h5>
+          <p class="content__details"><%=data.track.artist_name %></p>
+        </a>
+      <% }) %>
     </section>
     <section class="content__powered">
-      dskda
+      <h5 class="content__name">Showing result for : <%= query %></h5>
     </section>
   </main>
 </body>

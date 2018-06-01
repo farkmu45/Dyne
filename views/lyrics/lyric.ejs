@@ -5,54 +5,51 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simple Lyrics</title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
   <link rel="stylesheet" href="css/master.css">
 </head>
 
 <body class="container container-lyric">
   <main class="content">
     <section class="content__show content__show--landing">
-      <a href="#" class="content__main content__main--1">
-        <h5 class="content__name">Song Name 1</h5>
-        <p class="content__song">Song 1</p>
+      <a href="/lyric/<%= data.message.body.track_list[0].track.artist_name %>/<%= data.message.body.track_list[0].track.track_name %>" class="content__main content__main--1">
+        <h5 class="content__name"><%= data.message.body.track_list[0].track.track_name %></h5>
+        <p class="content__song"><%= data.message.body.track_list[0].track.artist_name %></p>
       </a>
-      <a href="#" class="content__main content__main--2">
-        <h5 class="content__name">Song Name 2</h5>
-        <p class="content__song">Song 1</p>
+      <a href="/lyric/<%= data.message.body.track_list[1].track.artist_name %>/<%= data.message.body.track_list[1].track.track_name %>" class="content__main content__main--2">
+        <h5 class="content__name"><%= data.message.body.track_list[1].track.track_name %></h5>
+        <p class="content__song"><%= data.message.body.track_list[1].track.artist_name %></p>
       </a>
-      <a href="#" class="content__main content__main--3">
-        <h5 class="content__name">Song Name 3</h5>
-        <p class="content__song">Song 1</p>
+      <a href="/lyric/<%= data.message.body.track_list[2].track.artist_name %>/<%= data.message.body.track_list[2].track.track_name %>" class="content__main content__main--3">
+        <h5 class="content__name"><%= data.message.body.track_list[2].track.track_name %></h5>
+        <p class="content__song"><%= data.message.body.track_list[2].track.artist_name %></p>
       </a>
-      <a href="#" class="content__main content__main--4">
-        <h5 class="content__name">Song Name 4</h5>
-        <p class="content__song">Song 1</p>
+      <a href="/lyric/<%= data.message.body.track_list[3].track.artist_name %>/<%= data.message.body.track_list[3].track.track_name %>" class="content__main content__main--4">
+        <h5 class="content__name"><%= data.message.body.track_list[3].track.track_name %></h5>
+        <p class="content__song"><%= data.message.body.track_list[3].track.artist_name %></p>
       </a>
-      <a href="#" class="content__main content__main--5">
-        <h5 class="content__name">Song Name 5</h5>
-        <p class="content__song">Song 1</p>
+      <a href="/lyric/<%= data.message.body.track_list[4].track.artist_name %>/<%= data.message.body.track_list[4].track.track_name %>" class="content__main content__main--5">
+        <h5 class="content__name"><%= data.message.body.track_list[4].track.track_name %></h5>
+        <p class="content__song"><%= data.message.body.track_list[4].track.artist_name %></p>
       </a>
-      <a href="#" class="content__main content__main--6">
-        <h5 class="content__name">Song Name 6</h5>
-        <p class="content__song">Song 1</p>
+      <a href="/lyric/<%= data.message.body.track_list[5].track.artist_name %>/<%= data.message.body.track_list[5].track.track_name %>" class="content__main content__main--6">
+        <h5 class="content__name"><%= data.message.body.track_list[5].track.track_name %></h5>
+        <p class="content__song"><%= data.message.body.track_list[5].track.artist_name %></p>
       </a>
-      <a href="#" class="content__main content__main--7">
-        <h5 class="content__name">Song Name 7</h5>
-        <p class="content__song">Song 1</p>
+      <a href="/lyric/<%= data.message.body.track_list[6].track.artist_name %>/<%= data.message.body.track_list[6].track.track_name %>" class="content__main content__main--7">
+        <h5 class="content__name"><%= data.message.body.track_list[6].track.track_name %></h5>
+        <p class="content__song"><%= data.message.body.track_list[6].track.artist_name %></p>
       </a>
     </section>
     <section class="content__powered">
-      <form class="" action="index.html" method="get" class="form">
-        <input type="text" placeholder="Song name" class="form__find form__find--light">
+      <form class="" action="/lyric/s" method="get" class="form">
+        <input type="text" name="words" placeholder="Song name" class="form__find form__find--light">
         <button type="submit" class="form__submit">
             <svg class="form__icon">
               <use xlink:href="img/sprite.svg#icon-search"></use>
             </svg>
           </button>
       </form>
-      <div class="content__bottom">
-        <h2 class="content__power">Powered By</h2>
-      </div>
     </section>
   </main>
 </body>

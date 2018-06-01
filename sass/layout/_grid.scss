@@ -6,7 +6,7 @@
     grid-template-rows: 6rem calc(100vh - 6rem) 60rem min-content 30rem 30vw min-content min-content;
 
     @include respond(bp-medium) {
-      grid-template-rows: 6rem calc(100vh - 6rem) 40vw 60rem min-content 30rem 80vw min-content min-content;
+      grid-template-rows: 5rem calc(100vh - 6rem) 40vw 60rem min-content 30rem 80vw min-content min-content;
     };
 
     @include respond(bp-small) {
@@ -23,9 +23,20 @@
   }
 
   &-lyric {
-    grid-template-rows: 5rem 50rem;
-    height: 100vh;
+    grid-template-rows: 10rem 50vh 10rem;
     background-image: linear-gradient(to top left, $primary-lyric-light, $primary-lyric-dark);
+    height: 100vh;
+
+    @include respond(bp-medium) {
+      grid-template-rows: 10rem 90vw;
+      height: auto;
+    };
+
+    @include respond(bp-small) {
+      grid-template-rows: 2rem min-content 10rem;
+    };
+
+
   }
 
   &-tasker {

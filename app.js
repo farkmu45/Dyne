@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var mongoose = require('mongoose');
 var methodOverride = require('method-override');
+var forceHTTPS = require("expressjs-force-https").forceHTTPS;
 
 var Data = require('./models/task');
 
@@ -12,6 +13,7 @@ var lyricRoutes = require('./routes/lyric')
 mongoose.connect('mongodb://fark5:maulana123@ds141320.mlab.com:41320/dyne');
 // mongoose.connect('mongodb://localhost/dyne');
 app.set('view engine', 'ejs');
+app.use(forceHTTPS);
 app.use(express.static(__dirname + '/public/'));
 app.use(express.urlencoded({
   extended: true

@@ -34,6 +34,13 @@
     display: inline-block;
     vertical-align: middle;
 
+    @include respond(bp-medium) {
+      transform: scale(.8);
+    };
+    @include respond(bp-small) {
+      transform: scale(.5);
+    };
+
     &:hover {
       .form__icon {
         fill: $primary-lyric;

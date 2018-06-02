@@ -22,29 +22,12 @@ router.get('/', function(req, res) {
     });
 });
 
-router.get('/:artist/:title', function(req, res) {
-  request('https://api.lyrics.ovh/v1/' + req.params.artist + '/' + req.params.title, function(error, response, body) {
-    if (error) {
-      res.render('error');
-      res.redirect('/lyric');
-    } else {
-      var data = JSON.parse(body);
-      var track_title = req.params.title;
-      var track_artist = req.params.artist
-      res.render('lyrics/lyric_details', {
-        data: data.lyrics.replace(/\n/g, "<br />"),
-        artist: track_artist,
-        title: track_title
-      });
-    }
-  })
-});
-
 router.get('/s', function(req, res) {
   var query = req.query.words
   music.trackSearch({
       q: req.query.words,
       page: 1,
+      f_has_lyrics: 1,
       page_size: 15
     })
     .then(function(data) {
@@ -53,9 +36,30 @@ router.get('/s', function(req, res) {
         query: query
       });
     }).catch(function(err) {
-      res.render('error');
-      res.redirect('/lyric');
+      console.log(err);
     });
 });
 
+
+router.get('/:track_id', function(req, res) {
+  music.track({
+      track_id: req.params.track_id
+    })
+    .then(function(song) {
+      music.trackLyrics({
+          track_id: req.params.track_id
+        })
+        .then(function(data) {
+          res.render('lyrics/lyric_details', {
+            data: data.message.body.lyrics.lyrics_body.replace(/\n/g, "<br />"),
+            track: song.message.body.track
+          });
+        }).catch(function(err) {
+          console.log(err);
+          res.render('error');
+        });;
+    }).catch(function(err) {
+      console.log(err);
+    });
+});
 module.exports = router;

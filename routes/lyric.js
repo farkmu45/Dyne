@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var request = require('request');
 var music = require('musicmatch')({
   apikey: "284838eacaf69ef9809891afbd8e427b"
 });
